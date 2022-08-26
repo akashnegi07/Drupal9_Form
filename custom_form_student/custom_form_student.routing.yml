@@ -1,0 +1,7 @@
+custom_form_student.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: '\Drupal\custom_form_student\Form\Helloform'
+    _title: 'Simple Form'
+  requirements: 
+    _access: 'TRUE'

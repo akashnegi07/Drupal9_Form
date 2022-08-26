@@ -1,0 +1,70 @@
+<?php
+use Drupal\Core\Database\Database;
+
+function custom_form_student_schema(){
+    $schema['students'] = [
+        'description' => 'The table for storing the students data.',
+        'fields' => [
+            'id' => [
+                'description' => 'The primary identifier for student',
+                'type' => 'serial',
+                'not null' => TRUE,
+                'unsigned' => TRUE,
+            ],
+            'fname' => [
+                'description' => 'Person name',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+           'sname' => [
+                'description' => 'Person second name.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+           ],
+            'age' => [
+                'description' => 'Age of person',
+                'type' => 'int',
+                'length' => 100,
+                'not null' => TRUE,
+               
+            ],
+            'address' => [
+                'description' => 'address of the person',
+                'type' => 'varchar',
+                'length' => 356,
+                'not null' => TRUE,
+            ],
+            'email' => [
+                'description' => 'Email of the person',
+                'type' => 'varchar',
+                'length' => 356,
+                'not null' => TRUE,
+            ],
+            'City' => [
+                'description' => 'City Location',
+                'type' => 'varchar',
+                'length' => 356,
+                'not null' => TRUE,
+            ],
+            'State' => [
+                'description' => 'State Location',
+                'type' => 'varchar',
+                'length' => 356,
+                'not null' => TRUE,
+            ],
+            'Location' => [
+                'description' => 'Location',
+                'type' => 'varchar',
+                'length' => 356,
+                'not null' => TRUE,
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+    return $schema;
+}
+
